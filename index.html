@@ -1,114 +1,206 @@
-Last login: Wed Apr  7 06:20:48 on ttys000
-jeremys@jeremys-MacBook-Air ~ % vim Documents/GitHub/applestores.github.io/index.html
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-jeremys@jeremys-MacBook-Air ~ % cd Documents/GitHub/applestores.github.io 
-jeremys@jeremys-MacBook-Air applestores.github.io % git add --all
-jeremys@jeremys-MacBook-Air applestores.github.io % git commit -m "bad guys"
-[main 63f2415] bad guys
- 3 files changed, 2 insertions(+), 2 deletions(-)
- create mode 100644 .index.html.swp
- create mode 100644 iPhone 12 - White - Vertical.png
-jeremys@jeremys-MacBook-Air applestores.github.io % git push
-ERROR: Permission to applestores/applestores.github.io.git denied to thearhus.
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-jeremys@jeremys-MacBook-Air applestores.github.io % cd ~/.ssh
-jeremys@jeremys-MacBook-Air .ssh % ls
-config				id_ed25519.pub			id_ed25519_apple-reseller.pub	id_ed25519_thearhus.pub		id_rsa.pub
-id_ed25519			id_ed25519_apple-reseller	id_ed25519_thearhus		id_rsa				known_hosts
-jeremys@jeremys-MacBook-Air .ssh % ls -l
-total 80
--rw-r--r--@ 1 jeremys  staff   184 Apr  7 04:04 config
--rw-------  1 jeremys  staff   464 Apr  7 03:05 id_ed25519
--rw-r--r--  1 jeremys  staff   108 Apr  4 20:01 id_ed25519.pub
--rw-------  1 jeremys  staff   464 Apr  7 04:00 id_ed25519_apple-reseller
--rw-r--r--  1 jeremys  staff   107 Apr  7 04:00 id_ed25519_apple-reseller.pub
--rw-------  1 jeremys  staff   464 Apr  7 03:09 id_ed25519_thearhus
--rw-r--r--  1 jeremys  staff   101 Apr  7 03:09 id_ed25519_thearhus.pub
--rw-------  1 jeremys  staff  2675 Apr  7 02:53 id_rsa
--rw-r--r--  1 jeremys  staff   589 Apr  4 23:39 id_rsa.pub
--rw-r--r--  1 jeremys  staff   803 Apr  4 21:26 known_hosts
-jeremys@jeremys-MacBook-Air .ssh % rm id_ed25519
-jeremys@jeremys-MacBook-Air .ssh % rm id_ed25519.pub 
-jeremys@jeremys-MacBook-Air .ssh % ls
-config				id_ed25519_apple-reseller.pub	id_ed25519_thearhus.pub		id_rsa.pub
-id_ed25519_apple-reseller	id_ed25519_thearhus		id_rsa				known_hosts
-jeremys@jeremys-MacBook-Air .ssh % vim id_ed25519_apple-reseller
-jeremys@jeremys-MacBook-Air .ssh % vim id_ed25519_apple-reseller.pub 
-jeremys@jeremys-MacBook-Air .ssh % vim config 
-jeremys@jeremys-MacBook-Air .ssh % cd ../Documents/GitHub/applestores.github.io
-jeremys@jeremys-MacBook-Air applestores.github.io % pbcopy index.html
-^C
-jeremys@jeremys-MacBook-Air applestores.github.io % vim index.html 
-jeremys@jeremys-MacBook-Air applestores.github.io % exit
-
-shell returned 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+<!DOCTYPE html>
+<html>
+        <head>
+<title>Apple Reseller</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="text" href"ipad.html">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif} 
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+        </head>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <img src="logo.png" alt="Apple" style="width:10vw;height:10vw;display:block;">
+    <!--<h3 class="w3-wide"><b>LOGO</b></h3>-->
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="ipad.html" class="w3-bar-item w3-button">iPad</a>
+    <a href="https://amzn.to/3dHmpxV" class="w3-bar-item w3-button">MacBok</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      iPhone<i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="https://amzn.to/3dHmpxV" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>iPhone 12</a>
+      <a href="https://amzn.to/3dHmpxV" class="w3-bar-item w3-button">iPhone 12</a>
+      <a href="https://amzn.to/3dHmpxV" class="w3-bar-item w3-button">iPhone 12 Pro</a>
+      <a href="https://amzn.to/3dHmpxV" class="w3-bar-item w3-button">iPhone 12 Pro Max</a>
+    </div>
+    <a href="https://amzn.to/3dHmpxV" class="w3-bar-item w3-button">AirPods</a>
+
+<!--    <a href="#" class="w3-bar-item w3-button">Gymwear</a>
+    <a href="#" class="w3-bar-item w3-button">Blazers</a>
+    <a href="#" class="w3-bar-item w3-button">Shoes</a>-->
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('gsletter').style.display='block'">Newsletter</a>
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <img src="fffffflogo.png" alt="Apple" style="width:99px;height:99px;padding:10px">
+  <!--<div class="w3-bar-item w3-padding-24 w3-wide">Apple</div>-->
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+ 
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">iPhone</p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="iPhone\ 12\ -\ White\ -\ Vertical.png " alt="iPad" style="width:100%">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
+      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
+      <h1 class="w3-hide-small" >Fall 2021</h1>
+      <p><a href="ipad.html" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p>8 Apples</p>
+  </div>
+  <!-- Product grid -->
+  <div class="w3-row w3-grayscale">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="ipad.jpg" style="width:100%">
+        <p>iPhone Available Now<br><b>$999</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="ipad.jpg" style="width:100%">
+        <p>MacBook<br><b>$999</b></p>
+      </div>
+    </div>
+
+       <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="ipad.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>iPhone 12<br><b>$999</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="ipad.jpg" style="width:100%">
+        <p>iPhone 12 Pro<br><b>$999</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="ipad.jpg" style="width:100%">
+        <p>iPad Pro<br><b>$999</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="ipad.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>MacBook<br><b class="w3-text-red">$999</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="ipad.jpg" style="width:100%">
+        <p>More...<br><b>Apple</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="ipad.jpg" style="width:100%">
+        <p>AirPods<br><b>$149</b></p>
+      </div>
+    </div>
+  </div>
+ 
+   <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">We're hiring</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> Apple Reseller</p>
+        <p><i class="fa fa-fw fa-phone"></i> 5305662643</p>
+        <p><i class="fa fa-fw fa-envelope"></i> jeremy@apple-reseller.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+ 
+   <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
 
   <!-- End page content -->
 </div>
@@ -150,7 +242,8 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
-}
+ 
+ }
 </script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script type="text/javascript">
